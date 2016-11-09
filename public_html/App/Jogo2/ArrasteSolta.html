@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Arraste e Solte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../Css/jquery-3.1.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="principal">
+            <div id="aqui" ></div>
+            <table id="tb" border='1'>
+                <tr>
+                    <td><span>valor 1</span></td>
+                    <td><span>valor 2</span></td>
+                    <td><span>valor 3</span></td>
+                    <td><span>valor 4</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="temp"></div>
+        <script type="text/javascript">
+            var temp = "";
+            $("#principal").mouseover(function () {
+                $(this).css("cursor", "move");
+            });
+            $("td").mousedown(function (e) {
+                e.preventDefault();
+                var novo = $(this).children("span").clone(true);
+                $("#principal").append(novo);
+                novo.css({"position": "absolute",
+                    "top": (e.pageY - parseInt(novo.css("height"))) + 'px',
+                    "left": (parseInt($(this).offset().left)) + 'px',
+                    "backgroundColor": "red"});
+                temp = novo;
+            });
+
+            $("#aqui").mouseup(function (e) {
+                $("#principal").children("span").remove();
+                $(this).text(temp.text());
+                e.preventDefault();
+            });
+            $(document).mouseup(function () {
+                $("#principal").children("span").remove();
+                temp = null;
+            });
+
+            $(document).mousemove(function (e) {
+                if (temp !== "") {
+                    temp.css({"top": (e.pageY - parseInt(temp.css("height"))) + "px",
+                        "left": e.pageX + "px"
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
