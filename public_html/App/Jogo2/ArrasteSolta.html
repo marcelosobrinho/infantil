@@ -4,10 +4,13 @@
     <head>
         <title>Arraste e Solte</title>
         <meta charset="UTF-8">
+       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../../Js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <style>
             html,body{
+                background-color: #ccffff;
+                
                 height: 100%;
                 width: 100%;
                 margin: 0;
@@ -15,6 +18,10 @@
             }
             #prinipal{
                 height:100px;
+            }
+            #titulo{
+                @font-face
+                font-family: fantasy;
             }
             .cor1{
                 background-color: antiquewhite; 
@@ -30,9 +37,9 @@
         </style>
     </head>
     <body>
-
+        <div id="titulo"><h2> <center> Qual o resultado da continha? </center> </h2></div>
         <div id="principal">
-
+            <center>
             <table id="tb" border='1'>
                 
                 <tr>
@@ -85,6 +92,7 @@
                 </tr>
 
             </table>
+                </center>
         </div>
         <div id="temp"></div>
         <script src="JavaScript/CriaTabela.js" type="text/javascript"></script>
