@@ -1,18 +1,51 @@
 $(function () {
-    var i = 0;
-    var num = [];
-    var texto="";
-    var texto2="";
-    while (i <= 25) {
-        num[i] = Math.floor((Math.random() * 10) + 1);
+    var i = 1;
+    var operacao = [];
+    var linhaOp="<table id='tb' border='1'>";
+    var linhaRe="";
+    var posicao = 0;
+    var num1 = 0;
+    var num2 = 0;
+    
+    while (i <= 20) {
+        operacao[i] = Math.floor(Math.random() * 10 + 1);
+        i++;
+    }
+     
+    i=1;
+    
+    while (i <= 20) {
+        num1 = operacao[Math.floor(Math.random() * 10 + 24)];
+        num2 = operacao[Math.floor(Math.random() * 10 + 24)];
+        if (i<=5){            
+            resultado[i] = num1 + num2;
+            linhaOp +=  "  <tr>  \n\
+                                <td><div id="+ i +" class='aqui cor1' >"+ num1 + " + " + num2 +"</div></td>\n\
+                            </tr>";
+        }     
+        if ((i>5) && (i<=10)) {
+            resultado[i] = num1 - num2;
+            linhaOp +=  "  <tr>  \n\
+                                <td><div id="+ i +" class='aqui cor1' >"+ num1 + " - " + num2 +"</div></td>\n\
+                            </tr>";
+        }     
+        if ((i>10) && (i<=15)){
+            resultado[i] = num1 / num2;
+            linhaOp +=  "  <tr>  \n\
+                                <td><div id="+ i +" class='aqui cor1' >"+ num1 + " : " + num2 +"</div></td>\n\
+                            </tr>";
+        }     
+        if (i>15){
+            resultado[i] = num1 * num2;
+            linhaOp +=  "  <tr>  \n\
+                                <td><div id="+ i +" class='aqui cor1' >"+ num1 + " X " + num2 +"</div></td>\n\
+                            </tr>";
+        }     
         i++;
     }
     
-    while (i <= 25) {
-        texto=  "  <tr>  \n\
-                            <td><div id="+i+" class='aqui cor1' >  Operação</div></td>\n\
-                        </tr>";       
-    }
+    linhaOp += "</table>";
+    
 //    i=0;
 //    while (i <= 5) {
 //        var texto += "<tr>\n\
@@ -46,122 +79,141 @@ $(function () {
             alert(num[14]);
             $(this).text(soma());
         }
-
     });
+    
     $("#dv2").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv3").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv4").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv5").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv6").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv7").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv8").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv9").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv10").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv11").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv12").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv13").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv14").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv15").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv16").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv17").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv18").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv19").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv20").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
         e.preventDefault();
         alert(temp.text());
     });
+    
     $("#dv21").mouseup(function (e) {
         $("#principal").children("span").remove();
         $(this).text("");
