@@ -1,11 +1,28 @@
 $(function () {
-   var i =0;
-   var num =[];
-    while(i<=25){
-            num[i] = Math.floor((Math.random() * 10) + 1) ;
-            i++;
-            
-   }
+    var i = 0;
+    var num = [];
+    var texto="";
+    var texto2="";
+    while (i <= 25) {
+        num[i] = Math.floor((Math.random() * 10) + 1);
+        i++;
+    }
+    
+    while (i <= 25) {
+        texto=  "  <tr>  \n\
+                            <td><div id="+i+" class='aqui cor1' >  Operação</div></td>\n\
+                        </tr>";       
+    }
+//    i=0;
+//    while (i <= 5) {
+//        var texto += "<tr>\n\
+//                                <td class=' aqui cor2'><span>" +num[i]+"</span></td>\n\
+//                                <td class=' aqui cor2'><span >"+num[i]+"</span></td>\n\
+//                                <td class=' aqui cor2'><span>"+num[i]+"</span></td>\n\
+//                                <td class=' aqui cor2'><span>"+num[i]+"</span></td>\n\
+//                                <td class=' aqui cor2'><span>"+num[i]+"</span></td>\n\
+//                            </tr>";
+//    }
 
     var temp = "";
     $("#principal").mouseover(function () {
@@ -21,7 +38,6 @@ $(function () {
             "backgroundColor": "red"});
         temp = novo;
     });
-
     $("#dv1").mouseup(function (e) {
         $("#principal").children("span").remove();
         if (temp.text() == 20) {
@@ -189,6 +205,4 @@ $(function () {
             });
         }
     });
-
-
 });
