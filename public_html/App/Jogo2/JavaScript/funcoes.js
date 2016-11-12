@@ -4,35 +4,77 @@ $(function () {
     var resultado = [];
     var indice1 = 0;
     var indice2 = 0;
-    while (i <= 5) {
+    while (i <= 20) {
         operacao[i] = Math.floor(Math.random() * 10 + 1);
-        alert(operacao[i]);
+       // alert(operacao[i]);
         i++;
     }
 
     i = 1;
 
-    while (i <= 5) {
-        var indice1 = Math.floor(Math.random() * 5 + 1);
-        var indice2 = Math.floor(Math.random() * 5 + 1);
+    while (i <= 20) {
+        var indice1 = Math.floor(Math.random() * 20 + 1);
+        var indice2 = Math.floor(Math.random() * 20 + 1);
         if (i <= 5) {
             resultado[i] = operacao[indice1] + operacao[indice2];
+            if(i==1)
+            document.getElementById("dv1").innerHTML = "<div id='dv1' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+            if(i==2)
+            document.getElementById("dv2").innerHTML = "<div id='dv2' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+            if(i==3)
+            document.getElementById("dv3").innerHTML = "<div id='dv3' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+           if(i==4)
+            document.getElementById("dv4").innerHTML = "<div id='dv4' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+            if(i==5)
+            document.getElementById("dv5").innerHTML = "<div id='dv5' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
             alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         if ((i > 5) && (i <= 10)) {
+            
             resultado[i] = operacao[indice1] - operacao[indice2];
-            alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
+           // alert(i + "Op = " + indice1 + "-" + indice2 + "-" + resultado[i]);
+            if(i==6)
+            document.getElementById("dv6").innerHTML = "<div id='dv6' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+            if(i==7)
+            document.getElementById("dv7").innerHTML = "<div id='dv7' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+            if(i==8)
+            document.getElementById("dv8").innerHTML = "<div id='dv8' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+           if(i==9)
+            document.getElementById("dv9").innerHTML = "<div id='dv9' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+            if(i==10)
+            document.getElementById("dv10").innerHTML = "<div id='dv10' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+
 
         }
         if ((i > 10) && (i <= 15)) {
             resultado[i] = operacao[indice1] / operacao[indice2];
-            alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
+            if(i==11)
+            document.getElementById("dv11").innerHTML = "<div id='dv11' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+            if(i==12)
+            document.getElementById("dv12").innerHTML = "<div id='dv12' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+            if(i==13)
+            document.getElementById("dv13").innerHTML = "<div id='dv13' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+           if(i==14)
+            document.getElementById("dv14").innerHTML = "<div id='dv14' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+            if(i==15)
+            document.getElementById("dv15").innerHTML = "<div id='dv15' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+            //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         if ((i > 15)) {
-            resultado[i] = operacao[indice1] + operacao[indice2];
-            alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
+            resultado[i] = operacao[indice1] * operacao[indice2];
+            if(i==16)
+            document.getElementById("dv16").innerHTML = "<div id='dv16' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+            if(i==17)
+            document.getElementById("dv17").innerHTML = "<div id='dv17' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+            if(i==18)
+            document.getElementById("dv18").innerHTML = "<div id='dv18' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+           if(i==19)
+            document.getElementById("dv19").innerHTML = "<div id='dv19' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+            if(i==20)
+            document.getElementById("dv20").innerHTML = "<div id='dv20' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+            //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         i++;
