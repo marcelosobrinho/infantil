@@ -19,6 +19,7 @@ $(function () {
             resultado[i] = operacao[indice1] + operacao[indice2];
             if(i==1)
             document.getElementById("dv1").innerHTML = "<div id='dv1' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+            //document.getElementById("dv1").innerHTML = "<span id="sp1">"+resultado[i]+"</span>";
             if(i==2)
             document.getElementById("dv2").innerHTML = "<div id='dv2' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
             if(i==3)
@@ -27,7 +28,7 @@ $(function () {
             document.getElementById("dv4").innerHTML = "<div id='dv4' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
             if(i==5)
             document.getElementById("dv5").innerHTML = "<div id='dv5' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
-            alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
+            //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         if ((i > 5) && (i <= 10)) {
