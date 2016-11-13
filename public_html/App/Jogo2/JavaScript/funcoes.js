@@ -6,7 +6,7 @@ $(function () {
     var indice2 = 0;
     while (i <= 20) {
         operacao[i] = Math.floor(Math.random() * 10 + 1);
-       // alert(operacao[i]);
+        // alert(operacao[i]);
         i++;
     }
 
@@ -17,65 +17,64 @@ $(function () {
         var indice2 = Math.floor(Math.random() * 20 + 1);
         if (i <= 5) {
             resultado[i] = operacao[indice1] + operacao[indice2];
-            if(i==1)
-            document.getElementById("dv1").innerHTML = "<div id='dv1' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
-            //document.getElementById("dv1").innerHTML = "<span id="sp1">"+resultado[i]+"</span>";
-            $(dv1).text("deu");
-            if(i==2)
-            document.getElementById("dv2").innerHTML = "<div id='dv2' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
-            if(i==3)
-            document.getElementById("dv3").innerHTML = "<div id='dv3' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
-           if(i==4)
-            document.getElementById("dv4").innerHTML = "<div id='dv4' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
-            if(i==5)
-            document.getElementById("dv5").innerHTML = "<div id='dv5' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
+            if (i == 1) {
+                $(dv1).text(operacao[indice1]+" + "+operacao[indice2]);
+            }
+            if (i == 2)
+                $(dv2).text(operacao[indice1]+" + "+operacao[indice2]);
+            if (i == 3)
+                $(dv3).text(operacao[indice1]+" + "+operacao[indice2]);
+            if (i == 4)
+                $(dv4).text(operacao[indice1]+" + "+operacao[indice2]);
+            if (i == 5)
+                $(dv5).text(operacao[indice1]+" + "+operacao[indice2]);
             //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         if ((i > 5) && (i <= 10)) {
-            
+
             resultado[i] = operacao[indice1] - operacao[indice2];
-           // alert(i + "Op = " + indice1 + "-" + indice2 + "-" + resultado[i]);
-            if(i==6)
-            document.getElementById("dv6").innerHTML = "<div id='dv6' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
-            if(i==7)
-            document.getElementById("dv7").innerHTML = "<div id='dv7' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
-            if(i==8)
-            document.getElementById("dv8").innerHTML = "<div id='dv8' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
-           if(i==9)
-            document.getElementById("dv9").innerHTML = "<div id='dv9' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
-            if(i==10)
-            document.getElementById("dv10").innerHTML = "<div id='dv10' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" - "+operacao[indice2]+" </div>";
+            // alert(i + "Op = " + indice1 + "-" + indice2 + "-" + resultado[i]);
+            if (i == 6)
+                $(dv6).text(operacao[indice1]+" - "+operacao[indice2]);
+            if (i == 7)
+                $(dv7).text(operacao[indice1]+" - "+operacao[indice2]);
+            if (i == 8)
+                $(dv8).text(operacao[indice1]+" - "+operacao[indice2]);
+            if (i == 9)
+               $(dv9).text(operacao[indice1]+" - "+operacao[indice2]);
+            if (i == 10)
+                $(dv10).text(operacao[indice1]+" - "+operacao[indice2]);
 
 
         }
         if ((i > 10) && (i <= 15)) {
             resultado[i] = operacao[indice1] / operacao[indice2];
-            if(i==11)
-            document.getElementById("dv11").innerHTML = "<div id='dv11' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
-            if(i==12)
-            document.getElementById("dv12").innerHTML = "<div id='dv12' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
-            if(i==13)
-            document.getElementById("dv13").innerHTML = "<div id='dv13' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
-           if(i==14)
-            document.getElementById("dv14").innerHTML = "<div id='dv14' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
-            if(i==15)
-            document.getElementById("dv15").innerHTML = "<div id='dv15' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" : "+operacao[indice2]+" </div>";
+            if (i == 11)
+                $(dv11).text(operacao[indice1]+" : "+operacao[indice2]);
+            if (i == 12)
+                $(dv12).text(operacao[indice1]+" : "+operacao[indice2]);
+            if (i == 12)
+                $(dv13).text(operacao[indice1]+" : "+operacao[indice2]);
+            if (i == 13)
+                $(dv13).text(operacao[indice1]+" : "+operacao[indice2]);
+            if (i == 14)
+                $(dv15).text(operacao[indice1]+" : "+operacao[indice2]);
             //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
         if ((i > 15)) {
             resultado[i] = operacao[indice1] * operacao[indice2];
-            if(i==16)
-            document.getElementById("dv16").innerHTML = "<div id='dv16' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
-            if(i==17)
-            document.getElementById("dv17").innerHTML = "<div id='dv17' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
-            if(i==18)
-            document.getElementById("dv18").innerHTML = "<div id='dv18' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
-           if(i==19)
-            document.getElementById("dv19").innerHTML = "<div id='dv19' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
-            if(i==20)
-            document.getElementById("dv20").innerHTML = "<div id='dv20' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" x "+operacao[indice2]+" </div>";
+            if (i == 16)
+                $(dv16).text(operacao[indice1]+" / "+operacao[indice2]);
+            if (i == 17)
+                $(dv17).text(operacao[indice1]+" / "+operacao[indice2]);
+            if (i == 18)
+                $(dv18).text(operacao[indice1]+" / "+operacao[indice2]);
+            if (i == 19)
+                $(dv19).text(operacao[indice1]+" / "+operacao[indice2]);
+            if (i == 20)
+                $(dv20).text(operacao[indice1]+" / "+operacao[indice2]);
             //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
 
         }
