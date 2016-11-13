@@ -49,35 +49,35 @@
                         <table style="width:100%">
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td align="center">2 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num1" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>3 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num2" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>4 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num3" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>5 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num4" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>6 =</td>
-                                <td><input type="number" id="num" min="0" value="6"/></td>
+                                <td><input type="number" id="num5" min="0" value="6"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>7 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num6" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>8 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num7" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td> x </td><td> 9 = </td>
-                                <td><input type="number" id="num" min="0" /></td>
+                                <td><input type="number" id="num8" min="0" /></td>
                             </tr>
                         </table>
                     </div>
@@ -87,31 +87,31 @@
                         <table style="width:100%">
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>2 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num9" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>3 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num10" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>4 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num11" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>5 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num12" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>6 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num13" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>7 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num14" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>8 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num15" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/cachorro.jpg" alt="Cachorro"/></td><td>x</td><td>9 =</td>
@@ -165,7 +165,7 @@
                         <table style="width:100%">
                             <tr>
                                 <td><img src="imagens/pato.jpg" alt="Pato"/></td><td>x</td><td>2 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="num1" min="0"/></td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/pato.jpg" alt="Pato"/></td><td>x</td><td>3 =</td>
@@ -201,9 +201,19 @@
             </tr>
         </table>
         <script type="text/javascript">
-            $("#num").on("keyup change click focus", function () {
-                $(".classenome").val($(this).val());
+            $(function () {
+                var result = $(num1).val();
+
+                $("#num1").focusout(function () {
+                    result = $(this).val();
+                    if (result == 2) {
+                        alert(result + "DEU");
+                    }
+                });
             });
+//            $("#num1").function () {
+//               alert(); 
+//            });
 
         </script>
     </body>
