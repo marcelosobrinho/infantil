@@ -49,7 +49,7 @@
                         <table style="width:100%">
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td align="center">2 =</td>
-                                <td><input type="number" id="num" min="0"/></td>
+                                <td><input type="number" id="numB1" min="0" value="" onchange="verificaResult()"/></td><td> </td>
                             </tr>
                             <tr>
                                 <td><img src="imagens/borboleta.png" alt="Borboleta"/></td><td>x</td><td>3 =</td>
@@ -201,11 +201,20 @@
             </tr>
         </table>
         <script type="text/javascript">
-            $("#num").on("keyup change click focus", function () {
-                $(".classenome").val($(this).val());
-            });
-
+//            $("#num").on("keyup change click focus", function () {
+//                $(".classenome").val($(this).val());
+//            });
+            function verificaResult()
+            {
+                var x = document.getElementById("numB1");
+                if(x === 2){
+                    alert("ok");
+                }else{
+                    alert("Errado");
+                }
+            }
         </script>
+
     </body>
 
 </html>
