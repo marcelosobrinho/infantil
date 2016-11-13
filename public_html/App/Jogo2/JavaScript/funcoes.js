@@ -20,6 +20,7 @@ $(function () {
             if(i==1)
             document.getElementById("dv1").innerHTML = "<div id='dv1' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
             //document.getElementById("dv1").innerHTML = "<span id="sp1">"+resultado[i]+"</span>";
+            $(dv1).text("deu");
             if(i==2)
             document.getElementById("dv2").innerHTML = "<div id='dv2' class='aqui cor1' ALIGN='center'> "+operacao[indice1]+" + "+operacao[indice2]+" </div>";
             if(i==3)
@@ -100,7 +101,7 @@ $("#dv1").mouseup(function (e) {
     $("#principal").children("span").remove();
     if (temp.text() == 20) {
         e.preventDefault();
-        $(this).text(soma());
+        $(this).text("");
     }
 
 });
