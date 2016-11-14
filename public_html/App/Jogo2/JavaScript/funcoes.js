@@ -6,22 +6,23 @@ $(function () {
     var resultado = [];
     var indice1 = 0;
     var indice2 = 0;
+    function random(){
+        return Math.floor(Math.random() * 20 + 1);
+    }
+    function randomsemrepeticao(){
+    }
     // gera numeros randomico, para os operados
     while (i <= 20) {
         operacao[i] = Math.floor(Math.random() * 10 + 1);
         i++;
-    }
-    // função randomica sem repetição
-    for(i=1;i<=4;i++){
-        alert("Deu")
     }
     //-----------------------------------------------------
     i = 1;
 
     while (i <= 20) {
         // gera os indices random
-        var indice1 = Math.floor(Math.random() * 20 + 1);
-        var indice2 = Math.floor(Math.random() * 20 + 1);
+        var indice1 = random();
+        var indice2 = random();
         //--------------------------------------------------------
         if (i <= 5) {
             // soma de cada operador por volta
