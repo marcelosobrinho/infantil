@@ -10,6 +10,7 @@ $(function () {
         return Math.floor(Math.random() * 20 + 1);
     }
     function randomsemrepeticao(){
+        var i;
     }
     // gera numeros randomico, para os operados
     while (i <= 20) {
