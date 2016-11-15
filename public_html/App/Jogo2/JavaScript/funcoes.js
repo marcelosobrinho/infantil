@@ -6,10 +6,10 @@ $(function () {
     var resultado = [];
     var indice1 = 0;
     var indice2 = 0;
-    function random(){
+    function random() {
         return Math.floor(Math.random() * 20 + 1);
     }
-    function randomsemrepeticao(){
+    function randomsemrepeticao() {
         var i;
     }
     // gera numeros randomico, para os operados
@@ -126,146 +126,194 @@ $(function () {
         }
         i++;
     }
-});
 
-var temp = "";
-$("#principal").mouseover(function () {
-    $(this).css("cursor", "move");
-});
-$("td").mousedown(function (e) {
-    e.preventDefault();
-    var novo = $(this).children("span").clone(true);
-    $("#principal").append(novo);
-    novo.css({"position": "absolute",
-        "top": (e.pageY - parseInt(novo.css("height"))) + 'px',
-        "left": (parseInt($(this).offset().left)) + 'px',
-        "backgroundColor": "red"});
-    temp = novo;
-});
-$("#dv1").mouseup(function (e) {
-    $("#principal").children("span").remove();
+
+    var temp = "";
+    $("#principal").mouseover(function () {
+        $(this).css("cursor", "move");
+    });
+    $("td").mousedown(function (e) {
         e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv2").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv3").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv4").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv5").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv6").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv7").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv8").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv10").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv11").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv12").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv13").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv14").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv15").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv16").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv17").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv18").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv19").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
-$("#dv20").mouseup(function (e) {
-    $("#principal").children("span").remove();
-        e.preventDefault();
-        $(this).text(temp.text());
-        alert(temp.text());
-});
+        var novo = $(this).children("span").clone(true);
+        $("#principal").append(novo);
+        novo.css({"position": "absolute",
+            "top": (e.pageY - parseInt(novo.css("height"))) + 'px',
+            "left": (parseInt($(this).offset().left)) + 'px',
+            "backgroundColor": "red"});
+        temp = novo;
+    });
+    $("#dv1").mouseup(function () {
+        $("#principal").children("span").remove();
+        if (resultado[1] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+
+    });
+    $("#dv2").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[2] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv3").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[3] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv4").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[4] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv5").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[5] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv6").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[6] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv7").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[7] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv8").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[8] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv9").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[9] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv10").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[10] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv11").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[11] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv12").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[12] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv13").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[13] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv14").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[14] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv15").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[15] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv16").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[16] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv17").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[17] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv18").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[18] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv19").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[19] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
+    $("#dv20").mouseup(function (e) {
+        $("#principal").children("span").remove();
+        if (resultado[20] == temp.text()) {
+            $(this).text(temp.text());
+        } else {
+            alert("Resultado Incorreto");
+        }
+    });
 // Função para apagar o span da div onde foi solta            
-$(document).mouseup(function () {
-    $("#principal").children("span").remove();
-    temp = null;
-});
+    $(document).mouseup(function () {
+        $("#principal").children("span").remove();
+        temp = null;
+    });
 //Função para exibir o movimento de transissão
-$(document).mousemove(function (e) {
-    if (temp !== "") {
-        temp.css({"top": (e.pageY - parseInt(temp.css("height"))) + "px",
-            "left": e.pageX + "px"
-        });
-    }
+    $(document).mousemove(function (e) {
+        if (temp !== "") {
+            temp.css({"top": (e.pageY - parseInt(temp.css("height"))) + "px",
+                "left": e.pageX + "px"
+            });
+        }
+    });
 });
