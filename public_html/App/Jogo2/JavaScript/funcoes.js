@@ -18,13 +18,46 @@ $(function () {
         i++;
     }
     //-----------------------------------------------------
+    
+    //vetor para posicionamento randomico
+    
     i = 1;
-
+    var j = 1;
+    var posicaoResposta = [];
+    var num = 0;
+    
+    while (i <= 20){
+        j = 1; 
+        num = random();
+        while (j <= 20){            
+            if (posicaoResposta[j] === num){
+                num = random();
+                j = 1;
+            } else {
+                j++;
+            }
+        }
+        posicaoResposta[i] = num;
+        i++;
+    }
+//    alert(posicaoResposta[i]);
+    i=1;
+    var q = [];
+    while (i <= 20){
+        q += posicaoResposta[i] + ", ";
+        i++;
+    }
+    alert(q);
+    //-----------------------------------------------------
+    i = 1;
+    
     while (i <= 20) {
         // gera os indices random
         var indice1 = random();
         var indice2 = random();
         //--------------------------------------------------------
+        
+        
         if (i <= 5) {
             // soma de cada operador por volta
             resultado[i] = operacao[indice1] + operacao[indice2];
@@ -32,101 +65,99 @@ $(function () {
             // enviar os numeros e o sinal para div, sendo orientado pelo seu seletor. A condição limita a execução em apenas uma vez
             if (i === 1) {
                 $(dv1).text(operacao[indice1] + " + " + operacao[indice2]);
-                $(res1).text(resultado[i]);
-
             }
             if (i === 2) {
                 $(dv2).text(operacao[indice1] + " + " + operacao[indice2]);
-                $(res2).text(resultado[i]);
             }
             if (i === 3) {
                 $(dv3).text(operacao[indice1] + " + " + operacao[indice2]);
-                $(res3).text(resultado[i]);
             }
             if (i === 4) {
                 $(dv4).text(operacao[indice1] + " + " + operacao[indice2]);
-                $(res4).text(resultado[i]);
             }
             if (i === 5) {
                 $(dv5).text(operacao[indice1] + " + " + operacao[indice2]);
-                //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
-                $(res5).text(resultado[i]);
+                
             }
         }
         if ((i > 5) && (i <= 10)) {
             resultado[i] = operacao[indice1] - operacao[indice2];
             if (i === 6) {
                 $(dv6).text(operacao[indice1] + " - " + operacao[indice2]);
-                $(res6).text(resultado[i]);
             }
             if (i === 7) {
                 $(dv7).text(operacao[indice1] + " - " + operacao[indice2]);
-                $(res7).text(resultado[i]);
             }
             if (i === 8) {
                 $(dv8).text(operacao[indice1] + " - " + operacao[indice2]);
-                $(res8).text(resultado[i]);
             }
             if (i === 9) {
                 $(dv9).text(operacao[indice1] + " - " + operacao[indice2]);
-                $(res9).text(resultado[i]);
             }
             if (i === 10) {
                 $(dv10).text(operacao[indice1] + " - " + operacao[indice2]);
-                $(res10).text(resultado[i]);
             }
 
         }
         if ((i > 10) && (i <= 15)) {
             resultado[i] = operacao[indice1] / operacao[indice2];
             if (i === 11) {
-                $(dv11).text(operacao[indice1] + " : " + operacao[indice2]);
-                $(res11).text(resultado[i].toFixed(2));
+                $(dv11).text(operacao[indice1] + " : " + operacao[indice2])
             }
             if (i === 12) {
                 $(dv12).text(operacao[indice1] + " : " + operacao[indice2]);
-                $(res12).text(resultado[i].toFixed(2));
             }
             if (i === 13) {
                 $(dv13).text(operacao[indice1] + " : " + operacao[indice2]);
-                $(res13).text(resultado[i].toFixed(2));
             }
             if (i === 14) {
                 $(dv14).text(operacao[indice1] + " : " + operacao[indice2]);
-                $(res14).text(resultado[i].toFixed(2));
             }
             if (i === 15) {
                 $(dv15).text(operacao[indice1] + " : " + operacao[indice2]);
-                $(res15).text(resultado[i].toFixed(2));
             }
         }
         if ((i > 15)) {
             resultado[i] = operacao[indice1] * operacao[indice2];
             if (i === 16) {
                 $(dv16).text(operacao[indice1] + " x " + operacao[indice2]);
-                $(res16).text(resultado[i]);
             }
             if (i === 17) {
                 $(dv17).text(operacao[indice1] + " x " + operacao[indice2]);
-                $(res17).text(resultado[i]);
             }
             if (i === 18) {
                 $(dv18).text(operacao[indice1] + " x " + operacao[indice2]);
-                $(res18).text(resultado[i]);
             }
             if (i === 19) {
                 $(dv19).text(operacao[indice1] + " x " + operacao[indice2]);
-                $(res19).text(resultado[i]);
             }
             if (i === 20) {
                 $(dv20).text(operacao[indice1] + " x " + operacao[indice2]);
-                //alert(i + "= " + indice1 + "-" + indice2 + "-" + resultado[i]);
-                $(res20).text(resultado[i]);
             }
         }
         i++;
     }
 
+        $(res1).text(resultado[posicaoResposta[1]].toFixed(1));
+        $(res2).text(resultado[posicaoResposta[2]].toFixed(1));
+        $(res3).text(resultado[posicaoResposta[3]].toFixed(1));
+        $(res4).text(resultado[posicaoResposta[4]].toFixed(1));
+        $(res5).text(resultado[posicaoResposta[5]].toFixed(1));
+        $(res6).text(resultado[posicaoResposta[6]].toFixed(1));
+        $(res7).text(resultado[posicaoResposta[7]].toFixed(1));
+        $(res8).text(resultado[posicaoResposta[8]].toFixed(1));
+        $(res9).text(resultado[posicaoResposta[9]].toFixed(1));
+        $(res10).text(resultado[posicaoResposta[10]].toFixed(1));
+        $(res11).text(resultado[posicaoResposta[11]].toFixed(1));
+        $(res12).text(resultado[posicaoResposta[12]].toFixed(1));
+        $(res13).text(resultado[posicaoResposta[13]].toFixed(1));
+        $(res14).text(resultado[posicaoResposta[14]].toFixed(1));
+        $(res15).text(resultado[posicaoResposta[15]].toFixed(1));
+        $(res16).text(resultado[posicaoResposta[16]].toFixed(1));
+        $(res17).text(resultado[posicaoResposta[17]].toFixed(1));
+        $(res18).text(resultado[posicaoResposta[18]].toFixed(1));
+        $(res19).text(resultado[posicaoResposta[19]].toFixed(1));
+        $(res20).text(resultado[posicaoResposta[20]].toFixed(1));
 
     var temp = "";
     $("#principal").mouseover(function () {
@@ -144,7 +175,8 @@ $(function () {
     });
     $("#dv1").mouseup(function () {
         $("#principal").children("span").remove();
-        if (resultado[1] == temp.text()) {
+        alert(temp.text()+ " = " + resultado[posicaoResposta[1]]);
+        if (resultado[posicaoResposta[1]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -153,7 +185,7 @@ $(function () {
     });
     $("#dv2").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[2] == temp.text()) {
+        if (resultado[posicaoResposta[2]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -161,7 +193,7 @@ $(function () {
     });
     $("#dv3").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[3] == temp.text()) {
+        if (resultado[posicaoResposta[3]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -169,7 +201,7 @@ $(function () {
     });
     $("#dv4").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[4] == temp.text()) {
+        if (resultado[posicaoResposta[4]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -177,7 +209,7 @@ $(function () {
     });
     $("#dv5").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[5] == temp.text()) {
+        if (resultado[posicaoResposta[5]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -185,7 +217,7 @@ $(function () {
     });
     $("#dv6").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[6] == temp.text()) {
+        if (resultado[posicaoResposta[6]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -193,7 +225,7 @@ $(function () {
     });
     $("#dv7").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[7] == temp.text()) {
+        if (resultado[posicaoResposta[7]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -201,7 +233,7 @@ $(function () {
     });
     $("#dv8").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[8] == temp.text()) {
+        if (resultado[posicaoResposta[8]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -209,7 +241,7 @@ $(function () {
     });
     $("#dv9").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[9] == temp.text()) {
+        if (resultado[posicaoResposta[9]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -217,7 +249,7 @@ $(function () {
     });
     $("#dv10").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[10] == temp.text()) {
+        if (resultado[posicaoResposta[10]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -225,7 +257,7 @@ $(function () {
     });
     $("#dv11").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[11] == temp.text()) {
+        if (resultado[posicaoResposta[11]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -233,7 +265,7 @@ $(function () {
     });
     $("#dv12").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[12] == temp.text()) {
+        if (resultado[posicaoResposta[12]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -241,7 +273,7 @@ $(function () {
     });
     $("#dv13").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[13] == temp.text()) {
+        if (resultado[posicaoResposta[13]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -249,7 +281,7 @@ $(function () {
     });
     $("#dv14").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[14] == temp.text()) {
+        if (resultado[posicaoResposta[14]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -257,7 +289,7 @@ $(function () {
     });
     $("#dv15").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[15] == temp.text()) {
+        if (resultado[posicaoResposta[15]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -265,7 +297,7 @@ $(function () {
     });
     $("#dv16").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[16] == temp.text()) {
+        if (resultado[posicaoResposta[16]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -273,15 +305,14 @@ $(function () {
     });
     $("#dv17").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[17] == temp.text()) {
+        if (resultado[posicaoResposta[17]] === temp.text()) {
             $(this).text(temp.text());
-        } else {
-            alert("Resultado Incorreto");
+        } else {lert("Resultado Incorreto");
         }
     });
     $("#dv18").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[18] == temp.text()) {
+        if (resultado[posicaoResposta[18]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -289,15 +320,16 @@ $(function () {
     });
     $("#dv19").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[19] == temp.text()) {
+        if (resultado[posicaoResposta[19]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
+            a
         }
     });
     $("#dv20").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[20] == temp.text()) {
+        if (resultado[posicaoResposta[20]] === temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
