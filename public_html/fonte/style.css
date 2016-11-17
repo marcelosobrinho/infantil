@@ -8,31 +8,29 @@ html,body{
     height: 100%;
 
 }
+
 #principal{
     width: 70%;
     height: 100%;
     min-width: 240px;
     margin: 0 auto;
 }
+
 #tabela1{
     background-color: aquamarine;
+    font-family: caricature;
+    font-size: 3em;
 }
 #tabela2{
     background-color: chartreuse;
+    font-family: caricature;
+    font-size: 3em;
 }
 
 #tabela1,#tabela2{
-    width: 50%;
-    float: left;
-    height: 100%;
+    width: 100%;
+    height: auto;
     min-width: 240px;
-}
-
-table{
-    font-family: caricature;
-    background-color: antiquewhite;
-    font-size: 8em;
-
 }
 #titulo{
     font-family: caricature;
@@ -40,22 +38,13 @@ table{
     background-color: antiquewhite;
 }
 
-.aqui{
-    width: 50%;
-    height: 50%;
-    margin: 50px;
-    padding: 50px;
-}
 @font-face {
 
     font-family: "caricature";
     src: url("caricature.ttf") format("truetype");
 
 }
-
-
 .eddie-font{
     font-family: "caricature";  
 } .caricature {
-
 }
