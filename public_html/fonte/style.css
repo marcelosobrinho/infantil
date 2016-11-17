@@ -1,13 +1,61 @@
+body{
+    background-image: url(textura.gif)
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+}
+#principal{
+    width: 70%;
+    height: 100%;
+    min-width: 240px;
+    margin: 0 auto;
+}
+#tabela1{
+    background-color: aquamarine;
+}
+#tabela2{
+    background-color: chartreuse;
+}
+
+#tabela1,#tabela2{
+    width: 50%;
+    float: left;
+    height: 100%;
+    min-width: 240px;
+}
+
+table{
+    font-family: caricature;
+    background-color: antiquewhite;
+    font-size: 8em;
+
+}
+#titulo{
+    font-family: caricature;
+    font-size: 75px;
+    background-color: antiquewhite;
+}
+
+.aqui{
+    width: 50%;
+    height: 50%;
+    margin: 50px;
+    padding: 50px;
+}
 @font-face {
 
-      font-family: "caricature";
-      src: url("caricature.ttf") format("truetype");
+    font-family: "caricature";
+    src: url("caricature.ttf") format("truetype");
 
-      }
+}
 
 
 .eddie-font{
     font-family: "caricature";  
-       } .caricature {
+} .caricature {
 
 }
