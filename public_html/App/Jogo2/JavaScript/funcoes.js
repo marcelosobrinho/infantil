@@ -40,14 +40,7 @@ $(function () {
         posicaoResposta[i] = num;
         i++;
     }
-//Conferir vetor aleatório    
-//    i=1;
-//    var q = [];
-//    while (i <= 20){
-//        q += posicaoResposta[i] + ", ";
-//        i++;
-//    }
-//    alert(q);
+
     //-----------------------------------------------------
     i = 1;
     
@@ -137,27 +130,14 @@ $(function () {
         }
         i++;
     }
+    
+    //Distribuição aleatória das respostas
+    i = 1;
+    while (i <=20){
+        $("#res"+i).text(resultado[posicaoResposta[i]].toFixed(2));
+        i++;
+    }
 
-        $(res1).text(resultado[posicaoResposta[1]].toFixed(2));
-        $(res2).text(resultado[posicaoResposta[2]].toFixed(2));
-        $(res3).text(resultado[posicaoResposta[3]].toFixed(2));
-        $(res4).text(resultado[posicaoResposta[4]].toFixed(2));
-        $(res5).text(resultado[posicaoResposta[5]].toFixed(2));
-        $(res6).text(resultado[posicaoResposta[6]].toFixed(2));
-        $(res7).text(resultado[posicaoResposta[7]].toFixed(2));
-        $(res8).text(resultado[posicaoResposta[8]].toFixed(2));
-        $(res9).text(resultado[posicaoResposta[9]].toFixed(2));
-        $(res10).text(resultado[posicaoResposta[10]].toFixed(2));
-        $(res11).text(resultado[posicaoResposta[11]].toFixed(2));
-        $(res12).text(resultado[posicaoResposta[12]].toFixed(2));
-        $(res13).text(resultado[posicaoResposta[13]].toFixed(2));
-        $(res14).text(resultado[posicaoResposta[14]].toFixed(2));
-        $(res15).text(resultado[posicaoResposta[15]].toFixed(2));
-        $(res16).text(resultado[posicaoResposta[16]].toFixed(2));
-        $(res17).text(resultado[posicaoResposta[17]].toFixed(2));
-        $(res18).text(resultado[posicaoResposta[18]].toFixed(2));
-        $(res19).text(resultado[posicaoResposta[19]].toFixed(2));
-        $(res20).text(resultado[posicaoResposta[20]].toFixed(2));
 
     var temp = "";
     $("#principal").mouseover(function () {
