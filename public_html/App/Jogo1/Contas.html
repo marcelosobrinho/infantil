@@ -225,20 +225,21 @@
         </div> 
         <script type="text/javascript">
 
-            $(function () {
-            var result;
-            var sp;
-            var alt;
-            $(".result").change(function () {
-                result = $(this).val();
-                sp = $(this).parent().children("span").text();
-                alt = $(this).parent().parent().children(".img").children("img").attr("alt");
-                alt = alt.split(" ");
-                if (result == (sp * alt[0])){
-                    alert("Correto");
-                } else {
-                    alert("Incorreto!");
-                }
+            $(document).ready(function () {
+                var result;
+                var sp;
+                var alt;
+                $(".result").change(function () {
+                    result = $(this).val();
+                    sp = $(this).parent().children("span").text();
+                    alt = $(this).parent().parent().children(".img").children("img").attr("alt");
+                    alt = alt.split(" ");
+                    if (result == (sp * alt[0])) {
+                        alert("Correto");
+                    } else {
+                        alert("Incorreto!");
+                    }
+                });
             });
         </script>
     </body>
