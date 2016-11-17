@@ -40,17 +40,10 @@ $(function () {
         posicaoResposta[i] = num;
         i++;
     }
-//Conferir vetor aleatório    
-//    i=1;
-//    var q = [];
-//    while (i <= 20){
-//        q += posicaoResposta[i] + ", ";
-//        i++;
-//    }
-//    alert(q);
+
     //-----------------------------------------------------
     i = 1;
-    
+    var result = 0;
     while (i <= 20) {
         // gera os indices random
         var indice1 = random();
@@ -60,7 +53,7 @@ $(function () {
         
         if (i <= 5) {
             // soma de cada operador por volta
-            resultado[i] = operacao[indice1] + operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] + operacao[indice2]).toFixed(2));
             //--------------------------------------------------
             // enviar os numeros e o sinal para div, sendo orientado pelo seu seletor. A condição limita a execução em apenas uma vez
             if (i === 1) {
@@ -81,7 +74,7 @@ $(function () {
             }
         }
         if ((i > 5) && (i <= 10)) {
-            resultado[i] = operacao[indice1] - operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] - operacao[indice2]).toFixed(2));
             if (i === 6) {
                 $(dv6).text(operacao[indice1] + " - " + operacao[indice2]);
             }
@@ -100,7 +93,7 @@ $(function () {
 
         }
         if ((i > 10) && (i <= 15)) {
-            resultado[i] = operacao[indice1] / operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] / operacao[indice2]).toFixed(2));
             if (i === 11) {
                 $(dv11).text(operacao[indice1] + " : " + operacao[indice2]);
             }
@@ -118,7 +111,7 @@ $(function () {
             }
         }
         if ((i > 15)) {
-            resultado[i] = operacao[indice1] * operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] * operacao[indice2]).toFixed(2));
             if (i === 16) {
                 $(dv16).text(operacao[indice1] + " x " + operacao[indice2]);
             }
@@ -137,27 +130,14 @@ $(function () {
         }
         i++;
     }
+    
+    //Distribuição aleatória das respostas
+    i = 1;
+    while (i <=20){
+        $("#res"+i).text(resultado[posicaoResposta[i]].toFixed(2));
+        i++;
+    }
 
-        $(res1).text(resultado[posicaoResposta[1]].toFixed(2));
-        $(res2).text(resultado[posicaoResposta[2]].toFixed(2));
-        $(res3).text(resultado[posicaoResposta[3]].toFixed(2));
-        $(res4).text(resultado[posicaoResposta[4]].toFixed(2));
-        $(res5).text(resultado[posicaoResposta[5]].toFixed(2));
-        $(res6).text(resultado[posicaoResposta[6]].toFixed(2));
-        $(res7).text(resultado[posicaoResposta[7]].toFixed(2));
-        $(res8).text(resultado[posicaoResposta[8]].toFixed(2));
-        $(res9).text(resultado[posicaoResposta[9]].toFixed(2));
-        $(res10).text(resultado[posicaoResposta[10]].toFixed(2));
-        $(res11).text(resultado[posicaoResposta[11]].toFixed(2));
-        $(res12).text(resultado[posicaoResposta[12]].toFixed(2));
-        $(res13).text(resultado[posicaoResposta[13]].toFixed(2));
-        $(res14).text(resultado[posicaoResposta[14]].toFixed(2));
-        $(res15).text(resultado[posicaoResposta[15]].toFixed(2));
-        $(res16).text(resultado[posicaoResposta[16]].toFixed(2));
-        $(res17).text(resultado[posicaoResposta[17]].toFixed(2));
-        $(res18).text(resultado[posicaoResposta[18]].toFixed(2));
-        $(res19).text(resultado[posicaoResposta[19]].toFixed(2));
-        $(res20).text(resultado[posicaoResposta[20]].toFixed(2));
 
     var temp = "";
     $("#principal").mouseover(function () {
