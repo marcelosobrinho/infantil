@@ -16,18 +16,18 @@ html,body{
     margin: 0 auto;
 }
 
-#tabela1{
-    background-color: aquamarine;
+.tabela{  
     font-family: caricature;
     font-size: 3em;
 }
-#tabela2{
-    background-color: chartreuse;
-    font-family: caricature;
-    font-size: 3em;
+.cor{
+  background-color: chartreuse;  
+}
+.cor1{
+   background-color: aquamarine; 
 }
 
-#tabela1,#tabela2{
+.tabela{
     width: 100%;
     height: auto;
     min-width: 240px;

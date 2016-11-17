@@ -237,6 +237,7 @@ $(function () {
     $("#dv11").mouseup(function (e) {
         $("#principal").children("span").remove();
         if (resultado[11] == temp.text()) {
+            alert(resultado[11]);
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
@@ -244,7 +245,7 @@ $(function () {
     });
     $("#dv12").mouseup(function (e) {
         $("#principal").children("span").remove();
-        if (resultado[posicaoResposta[12]] === temp.text()) {
+        if (resultado[12] == temp.text()) {
             $(this).text(temp.text());
         } else {
             alert("Resultado Incorreto");
