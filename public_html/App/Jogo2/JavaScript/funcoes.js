@@ -43,7 +43,7 @@ $(function () {
 
     //-----------------------------------------------------
     i = 1;
-    
+    var result = 0;
     while (i <= 20) {
         // gera os indices random
         var indice1 = random();
@@ -53,7 +53,7 @@ $(function () {
         
         if (i <= 5) {
             // soma de cada operador por volta
-            resultado[i] = operacao[indice1] + operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] + operacao[indice2]).toFixed(2));
             //--------------------------------------------------
             // enviar os numeros e o sinal para div, sendo orientado pelo seu seletor. A condição limita a execução em apenas uma vez
             if (i === 1) {
@@ -74,7 +74,7 @@ $(function () {
             }
         }
         if ((i > 5) && (i <= 10)) {
-            resultado[i] = operacao[indice1] - operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] - operacao[indice2]).toFixed(2));
             if (i === 6) {
                 $(dv6).text(operacao[indice1] + " - " + operacao[indice2]);
             }
@@ -93,7 +93,7 @@ $(function () {
 
         }
         if ((i > 10) && (i <= 15)) {
-            resultado[i] = operacao[indice1] / operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] / operacao[indice2]).toFixed(2));
             if (i === 11) {
                 $(dv11).text(operacao[indice1] + " : " + operacao[indice2]);
             }
@@ -111,7 +111,7 @@ $(function () {
             }
         }
         if ((i > 15)) {
-            resultado[i] = operacao[indice1] * operacao[indice2];
+            resultado[i] = parseFloat((operacao[indice1] * operacao[indice2]).toFixed(2));
             if (i === 16) {
                 $(dv16).text(operacao[indice1] + " x " + operacao[indice2]);
             }
