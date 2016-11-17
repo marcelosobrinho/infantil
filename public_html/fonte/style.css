@@ -16,13 +16,6 @@ html,body{
     margin: 0 auto;
 }
 
-
-.dog,.borb,.cuelho,.pato{
-    width: 70%;
-    height: 100%;
-    min-width: 240px;
-    margin: 0 auto;
-}
 #tabela1{
     background-color: aquamarine;
     font-family: caricature;
@@ -51,10 +44,7 @@ html,body{
     src: url("caricature.ttf") format("truetype");
 
 }
-
-
 .eddie-font{
     font-family: "caricature";  
 } .caricature {
-
 }
